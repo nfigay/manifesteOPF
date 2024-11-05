@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifeste OPF</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/w2ui@1.5/w2ui-1.5.min.css">
+    <style>
+
+ 
+      .knowledge {
+            color: #3498db; /* bleu pour la gestion de la connaissance */
+        }
+        .architecture {
+            color: #27ae60; /* vert pour l'architecture d'entreprise */
+        }
+        .entrepreneurship {
+            color: #e74c3c; /* rouge pour l'entreprenariat */
+        }
+        .pillar {
+            color: #8e44ad; /* violet pour les piliers */
+        }
+        .integration {
+            color: #f39c12; /* jaune pour l'intégration des actions */
+        }
+        .modeling {
+            color: #1abc9c; /* turquoise pour la modélisation formelle */
+        }
+        .vision {
+            color: #9b59b6; /* violet clair pour la vision harmonisée */
+        }
+        .understanding {
+            color: #34495e; /* gris foncé pour la compréhension partagée */
+        }
+          .resilience {
+            color: #27ae60; /* vert pour la résilience */
+        }
+        .adaptation {
+            color: #3498db; /* bleu pour l'adaptation et la flexibilité */
+        }
+        .uncertainties {
+            color: #e74c3c; /* rouge pour les incertitudes et crises */
+        }
+        .growth {
+            color: #f39c12; /* jaune pour la capacité de croissance et renforcement */
+        }
+              .antifragile {
+            color: #8e44ad; /* violet pour l'antifragilité */
+        }
+        .stress {
+            color: #e74c3c; /* rouge pour les chocs et stress */
+        }
+        .growth {
+            color: #f39c12; /* jaune pour la croissance et le renforcement */
+        }
+        .adaptation {
+            color: #3498db; /* bleu pour la flexibilité et l'adaptation */
+        }
+             .context {
+            color: #3498db; /* bleu pour le contexte socio-économico-technologique */
+        }  
+        .rigid {
+            color: #e74c3c; /* rouge pour l'inadaptation et la rigidité des organisations */
+        }
+        .innovation {
+            color: #2ecc71; /* vert pour les innovations technologiques */
+        }
+        .change {
+            color: #f39c12; /* jaune pour les changements rapides et imprévisibles */
+        }
+       .disruptions {
+            color: #e74c3c; /* rouge pour les disruptions */
+        }
+        .technological {
+            color: #3498db; /* bleu pour les disruptions technologiques */
+        }
+        .environmental {
+            color: #27ae60; /* vert pour les disruptions environnementales */
+        }
+        .socio-political {
+            color: #9b59b6; /* violet pour les disruptions socio-politiques */
+        }
+        .resilience {
+            color: #f39c12; /* jaune pour les organisations résilientes et antifragiles */
+        }
+        .uncertainties {
+            color: #e74c3c; /* rouge pour les incertitudes socio-économiques */
+        }
+        .adaptation {
+            color: #3498db; /* bleu pour l'adaptation et la flexibilité */
+        }
+        .complexity {
+            color: #e74c3c; /* rouge pour la complexité digitale */
+        }
+        .impact {
+            color: #3498db; /* bleu pour les défis et les obstacles */
+        }
+         .ecosystem {
+            color: #2ecc71; /* vert pour l'écosystème */
+        }
+        .high-value {
+            color: #e67e22; /* orange pour les compétences à haute valeur ajoutée */
+        }
+        .creativity {
+            color: #3498db; /* bleu pour la créativité et la fonctionnalité */
+        }
+        .vuca {
+            color: #9b59b6; /* violet pour le monde VUCA */
+        }
+        .data-centric {
+            color: #e74c3c; /* rouge pour l'univers data-centric */
+        }
+        .clients {
+            color: #f39c12; /* jaune pour la diversité des clients */
+        }
+       .important {
+            color: #e74c3c; /* rouge pour les termes importants */
+        }
+        .context {
+            color: #3498db; /* bleu pour le contexte socio-économique et technologique */
+        }
+        .resilience {
+            color: #27ae60; /* vert pour résilience et antifragilité */
+        }
+    .icon {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-image: url('data:image/png;base64,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');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      vertical-align: middle; /* Align with text */
+  }
+  ul {
+            list-style-type: disc; /* Define bullet type */
+            padding-left: 5px; /* Indentation for first level */
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        /* Style for the second level of <ul> inside another <ul> */
+        ul ul {
+            list-style-type: circle; /* Define different bullet type for second level */
+            padding-left: 10px; /* Indentation for second level */
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        ul ul ul {
+            list-style-type: circle; /* Define different bullet type for second level */
+            padding-left: 10px; /* Indentation for second level */
+            margin-top: 1px;
+            margin-bottom: 0px;
+        }
+      li ul {
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        ul li {
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+    
+        p {
+      text-align: left;
+      font-size: 15px;
+      line-height: 1; 
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-left: 5px; /* Espace à gauche à l'intérieur du paragraphe */
+      border-left: 10px solid white; /* Bordure optionnelle pour visualiser */
+      
+    }
+    li {
+      text-align: left;
+      font-size: 15px;
+      line-height: 1; 
+    }
+          
+    .glossary-item {
+      width: 100%;  /* Fixed width */
+      height: 100%; /* Fixed height */
+      border: none;
+      padding: 0px;
+      overflow: scroll;
+      text-overflow: ellipsis; /* Optional: adds '...' if content overflows */
+      white-space: normal; /* Prevent text wrapping */
+      background-color: white;
+      display:none
+    }
+    .glossary-item.active {
+      display: block; /* Display the item when it has 'active' class */
+    }
+
+    .glossary-item.scrollable {
+      overflow: auto; /* Add scrollbar for overflowing content */
+      white-space: normal; /* Allow text to wrap within this element */
+    }
+    
+    .grid-container {
+            display: grid;
+            grid-template-columns: 19% 60% 19%;
+            grid-template-rows: 40px 30px 0.99fr 50px 70px 20px  ;
+            gap: 0px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;          
+            
+        }
+        .grid-item {
+            background-color: white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border: 1px solid #333; 
+            
+            
+        }
+        .grid-item.large {
+            grid-column: span 3;
+            background-color: white;
+            font-size: 24px;
+            border: 1px solid #333;
+
+        }
+        .grid-item.large2 {
+            grid-column: span 2;
+            background-color: white;
+            font-size: 24px;
+            border: 1px solid #333;
+
+        }
+        
+        .grid-item.medium {
+            font-size: 14px;
+            border: 1px solid #333;
+
+        }
+        .grid-item.blank {
+            border: none;
+            border: 0px solid #333;
+        }
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(116, 157, 234, 0.467);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    display: none; /* Hidden by default, show with JavaScript */
+    white-space: normal; /* Allow text to wrap to the next line */
+    max-width: 600px; /* Maximum width of the tooltip */
+    max-height: 400px; /* Maximum height of the tooltip */
+    overflow: auto; /* Add scrollbars if the content exceeds the max height */
+    z-index: 1000; /* Ensure the tooltip appears above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add a shadow for better visibility */
+}
+    
+    .tooltip.show {
+      display: block;
+    }
+
+    .svg-text {
+      cursor: pointer;
+    }
+   
+    svg {
+      border: none;
+      padding: none;
+    }
+        .tooltip-element {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    svg:active {
+      cursor: grabbing;
+    }
+
+    svgContainer {
+      height: 99%;
+    }
+    </style>
+</head>
+<body>
+  
+
+<div class="grid-container">
+
+
+<div class="grid-item blank"><span class=" icon"></span></div>
+    <div class="grid-item" style="text-align: center;display: flex;font-size:20px;color: white;background-color:#27AE60;gap: none;"> <span style="text-align: center;"><strong>Les bases du 
+      <span style="color:yellow" class="svg-text hover-item" data-tooltip="manifeste">manifeste</span>
+      <span style="color:lightgoldenrodyellow"  class="svg-text hover-item" data-tooltip="opf">Open People Factory</strong></span>
+    </div>
+
+    <div class="grid-item blank" style="text-align: center;display: flex;font-size:15px;color: black;background-color:white;gap: none;">
+      Viewer authored by&nbsp<a href="https://www.linkedin.com/in/nfigay/" target="_blank">Nicolas Figay</a>
+
+    </div>
+    
+    <div class="grid-item blank style="text-align: center;display: block;font-size:20px;color: white;border: none;background-color:#27AE60;gap: none;""></div>
+    <div class="grid-item " style="text-align: center;background-color: rgba(255, 255, 0, 0.5);">
+      <span style="color:blue"  class="svg-text hover-item" data-tooltip="organisation">Organisation&nbsp;</span>
+      <span style="color:green" class="svg-text hover-item" data-tooltip="organisation">Socio-Technique&nbsp;</span> 
+      <span style="color:blue"  class="svg-text hover-item" data-tooltip="resiliente-antifragile">résiliente et antifragile</span></div>
+    <div class="grid-item blank"></div>
+    <div class="grid-item medium" style="display: block;align-items: top;max-height: 600px; overflow: scroll;">
+          <p> 
+          Le <span class="important">manifeste d'Open People Factory</span> aborde la nécessité de repenser les organisations, souvent inadaptées au <span class="context">contexte socio-économique et technologique actuel</span>. Face à la <span class="context">complexité digitale</span>, aux <span class="context">incertitudes socio-économiques</span> et aux <span class="context">disruptions environnementales</span>, il plaide pour la transition vers une organisation <span class="resilience">socio-technique résiliente</span> et <span class="resilience">antifragile</span>.
+        </p>
+          <p>
+            Cette dernière repose sur trois piliers fondamentaux : la <span class="knowledge">gestion de la connaissance</span>, l'<span class="architecture">architecture d'entreprise</span> et l'<span class="entrepreneurship">entreprenariat</span>, interconnectés à travers des actions intégrées, qu'elles soient <span class="integration">micro</span> ou <span class="integration">macro</span>, permettant une cohérence et une synergie entre les différents aspects de l'organisation.
+        </p>
+
+      <p>
+        Pour <span style="color: blue;">l'architecture d'entreprise</span>, il s'agit de passer de l'<span style="color: red;">ambiguïté</span> à la <span style="color: green;">clarté</span>, de données <span style="color: red;">silotées</span> à des données <span style="color: green;">connectées</span>, et d'un contexte <span style="color: red;">fragmenté</span> à une <span style="color: green;">conscience contextuelle</span>.
+      </p>
+      
+      <p>
+        Pour <span style="color: blue;">la gestion de la connaissance</span>, le savoir doit passer du <span style="color: red;">tacite</span> à l'<span style="color: green;">explicite</span>, de l'individuel au <span style="color: green;">partagé</span>, et être facilement opérationnalisé en <span style="color: green;">savoir-faire</span>.
+      </p>
+      
+      <p>
+        Pour <span style="color: blue;">l'intrapreneuriat</span>, il faut évoluer de la <span style="color: red;">rigidité</span> vers une <span style="color: green;">adaptabilité</span>, d'une culture <span style="color: red;">sclérosante</span> à une culture <span style="color: green;">dynamisante</span>, et de la <span style="color: red;">fixité</span> à la <span style="color: green;">fluidité</span> face à l'impermanence.
+      </p>
+      <p>
+        Enfin, <span style="color: purple;">vision harmonisée commune</span> et <span style="color: purple;">compréhension partagée basées</span> sur des <span style="color: purple;">modèles formels</span> sont requises.
+      </p>
+      
+      <div style="display:none;">
+        <b style="color:black;">Le changement s'appuyant sur les <span style="color:blue;">3 piliers </span>vise à changer en <span style="color:green;">organisations socio-techniques résilientes/anti-fragiles</span></b>:
+        <ul>
+            <li >Une <span style="color:blue;">vision globale </span><span style="color:green;">intégrée intelligible pour l'humain (complexité maitrisée) et utilisable par la machine</span> (<span style="color:purple;">IA éduquée</span>)</li>
+            <li >L'<span style="color:green;">interaction</span> entre les <span style="color:blue;">projets</span> qui se <span style="color:green;">soutiennent mutuellement</span> sur le <span style="color:green;">long terme</span></li>
+            <li >Des solutions systémiques prenant en compte chaque niveau et relation de l'individuel au collectif</li>
+            <li >Une <span style="color:blue;">modélisation</span> <span style="color:green;">robuste et flexible</span> basée sur l'<span style="color:blue;">architecture</span>, la <span style="color:blue;">connaissance</span> et et l'<span style="color:blue;">interprenariat</span> au service de l'<span style="color:blue;">action intégrée</span></li>
+        </ul><span style="color:blue;">
+        <b style="color:black;">des organisations inadaptées:</b>
+        <ul>
+            <li> Une <span style="color:darkorange;">absence</span> de <span style="color:blue;">vision globale</span></li>
+            <li>Le <span style="color:darkorange;">court-termisme</span> des <span style="color:blue">projets</span></li>
+            <li>Des <span style="color:blue">solutions</span> <span style="color:darkorange;">fragmentaires, isolées et non réutilisables</span></li>
+            <li>Un <span style="color:darkorange;">manque d'intégration</span> de l'<span style="color:blue;">architecture d'entreprise</span> et de l'<span style="color:blue;">ingénierie par les modèles</span>, voire leur <span style="color:darkorange;">absence</span></li>
+            <li>L'<span style="color:darkorange;">incapacité</span> à <span style="color:blue;">gérer la complexité grandissantes</span> des organisations, technologies et contextes du fait d'<span style="color:darkorange;">approches individualistes et fragmentées</span>
+            <li>Des <span style="color:blue">acteurs</span> <span style="color:darkorange;">rigides, démotivés, inadaptés et non ancrés dans la réalité</span></li>            
+        </ul>
+    </ul>
+  </div>
+    
+    </div>
+
+    <div class="grid-item " id="svgContainer" style="display: flex;align-items: top;overflow: hidden;">
+
+        <svg id="monSvg" width="800px" height="600px" style="object-fit: contain;" viewBox="0 -100 2400 1100" xmlns="http://www.w3.org/2000/svg">
+          
+          <!-- Template for Pilar Description -->
+            <defs>
+               <g id="template">
+                   <polygon points="300,143 470,450 130,450" fill="#00bf63ff" class="polygon-color"/>
+                   <circle cx="300" cy="345" r="150"  fill="#99ccffff" />
+                   <text  x="300" y="320" text-anchor="middle" dominant-baseline="central" fill="black" font-size="50">
+                      <tspan x="300" data-tooltip="manifeste"class="text1-content svg-text hover-item" dy="0"></tspan>
+                      <tspan x="300" data-tooltip="manifeste"class="text1b-content svg-text hover-item" dy="1.2em"></tspan>
+                   </text>
+                   <text   x="300" y="20" text-anchor="middle" dominant-baseline="central" fill="black" font-size="50">
+                    <tspan x="300" data-tooltip="manifeste" class="text2-content svg-text hover-item" dy="0"></tspan>
+                    <tspan x="300" data-tooltip="manifeste" class="text2b-content svg-text hover-item" dy="1.2em"></tspan>
+                 </text>
+                 <text  x="40" y="500" text-anchor="middle" dominant-baseline="central" fill="black" font-size="50">
+                    <tspan x="60" data-tooltip="manifeste" class="text3-content svg-text hover-item" dy="0"></tspan>
+                    <tspan x="60" data-tooltip="manifeste" class="text3b-content svg-text hover-item" dy="1.2em"></tspan>
+                 </text> 
+                 <text  x="600" y="500" text-anchor="middle" dominant-baseline="central" fill="black" font-size="50">
+                    <tspan x="580" data-tooltip="manifeste" class="text4-content svg-text hover-item" dy="0"></tspan>
+                    <tspan x="580" data-tooltip="manifeste" class="text4b-content svg-text hover-item" dy="1.2em"></tspan>
+                 </text>              
+                            
+                   <circle cx="300" cy="345" r="229" stroke="#00bf63ff" stroke-width="2" fill="none" class="circle-stroke" />
+                </g>
+        
+        <!-- Template for Double Arrow -->
+        
+            <g id="double-arrow">
+              <!-- Horizontal line -->
+              <line id="arrow-line" x1="50" y1="100" x2="350" y2="100" stroke="black" stroke-width="5"/>
+              
+              <!-- Left arrowhead -->
+              <polygon id="arrowhead-left" points="50,90 50,110 30,100" fill="black"/>
+              
+              <!-- Right arrowhead -->
+              <polygon id="arrowhead-right" points="350,90 350,110 370,100" fill="black"/>
+        
+            </defs>
+            <g fill="yellow" fill-opacity="0.5" id="myPath" >
+              <path id="myPath2" d="m1492,12632c-174,-882 -688,-2559 -1376,-4484c-58,-163 -106,-300 -106,-304c0,-4 64,55 143,132c274,269 534,460 854,626c207,108 469,217 484,201c3,-5 12,-57 18,-118c34,-315 129,-768 251,-1190c409,-1416 1176,-2924 2097,-4122c1530,-1991 3425,-3149 5478,-3347c83,-8 188,-17 235,-21l85,-6l-70,62c-131,115 -335,330 -415,437c-326,434 -232,743 283,933c308,114 809,192 1457,229c323,18 982,31 1387,28c399,-3 497,3 248,16c-71,4 -242,18 -380,32c-2193,218 -4255,871 -5935,1878c-983,589 -1831,1315 -2464,2109c-741,930 -1224,1990 -1420,3118l-6,36l97,-18c449,-84 985,-267 1482,-505c85,-41 155,-74 157,-74c1,0 -50,71 -115,158c-518,697 -1027,1447 -1418,2092c-513,845 -850,1551 -978,2047c-19,74 -35,143 -35,154c0,10 -3,19 -7,19c-5,0 -18,-53 -31,-118z" transform=" scale(0.125,0.125) translate(9000 ,5000) rotate(135, 200, 100)"/>
+             </g>
+           
+            <!-- Instance placeholders -->
+            <g id="instance1" transform="translate(200, 0)"></g>
+            <g id="instance2" transform="translate(1600, 0)"></g>
+            <g id="instance3" transform="translate(1000, 800) rotate(180, 250, 250)"></g>
+        
+            <g id="text3" fill="black"><
+               <text x="400" y="270"  text-anchor="middle" dominant-baseline="central" font-size="50">
+                   <tspan id="text3-middle" class="svg-text hover-item" ></tspan>  
+               </text>
+               <text x="420" y="525" text-anchor="middle" dominant-baseline="central"  font-size="50">
+                   <tspan id="text3-bottom" x="420"  dy="0" class="svg-text  hover-item" ></tspan>
+                   <tspan  class="svg-text  hover-item" x="420" id="text3b-bottom" dy="1.2em" ></tspan>
+               </text>
+               <text x="140" y="120" text-anchor="middle" dominant-baseline="central"  font-size="50">
+                   <tspan id="text3-left" class="svg-text hover-item" x="100" id="text3-left" ></tspan>
+                   <tspan  class="svg-text  hover-item" x="100" id="text3b-left" dy="1.2em">fixité => fluidité</tspan>
+               </text>
+               <text x="740" y="120" text-anchor="middle" dominant-baseline="central"  font-size="50" >
+                   <tspan class="svg-text hover-item"  x="740" id="text3-right" dy="0"></tspan>
+                   <tspan class="svg-text  hover-item"  x="740" id="text3b-right" dy="1.2em"></tspan>
+                   <tspan class="svg-text  hover-item" x="740" id="text3c-right" dy="1.2em"></tspan>
+               </text>   
+            /g>  
+            
+            <rect x="160" y="-200" width="500" height="140" rx="20" ry="20"  fill="lightblue"  stroke="black" stroke-width="2" />
+          
+          <!-- Text -->
+          <text  data-tooltip="modeling" x="400" y="-1000" font-size="60" fill="blue" text-anchor="middle">
+            <tspan class="hover-item svg-text"  data-tooltip="pilars"  x="400" dy="0">Les 3 piliers d'une organisation socio-technique anti-fragile/résilient </tspan>
+            <tspan class="hover-item svg-text" data-tooltip="hommes-machines" x="400" dy="1.2em">pour une solution collective conciliant hommes et machines</tspan>
+          </text>
+
+          <text class="svg-text"  x="0" y="-150" font-size="50" fill="black" text-anchor="middle">
+            <tspan class="hover-item svg-text" data-tooltip="integrated-actions" x="400" dy="0">Action intégrée</tspan>
+            <tspan class="hover-item svg-text" data-tooltip="integrated-actions" x="400" dy="1.2em">(du micro au macro)</tspan>
+          </text>
+        
+          <text  data-tooltip="modeling" x="400" y="-800" font-size="55" fill="purple" text-anchor="middle">
+            <tspan class="hover-item svg-text"  data-tooltip="modeling"  x="400" dy="0">Modélisation</tspan>
+            <tspan class="hover-item svg-text" data-tooltip="modeling" x="400" dy="1.2em">Formelle</tspan>
+          </text>
+        
+          <text data-tooltip='common-harmonized-vision' x="-500" y="300" font-size="55" fill="purple" text-anchor="middle">
+            <tspan class="hover-item svg-text"  data-tooltip="common-harmonized-vision"  x="-300" dy="0">Vision Harmonisée</tspan>
+            <tspan class="hover-item svg-text" data-tooltip="common-harmonized-vision" x="-300" dy="1.2em">Commune</tspan>
+          </text>   
+          
+          <text x="0" y="300" font-size="55" fill="purple"  text-anchor="middle">
+            <tspan class="hover-item svg-text" data-tooltip="shared-understanding" x="1100" dy="0">Compréhension</tspan>
+            <tspan class="hover-item svg-text" data-tooltip="shared-understanding" x="1100" dy="1.2em">Partagée</tspan>
+          </text>
+          
+          <text  data-tooltip="pragmatic-praxis"  x="0" y="-350" font-size="70" fill="green"  text-anchor="middle">
+            <tspan class="hover-item svg-text" data-tooltip="pragmatic-praxis" x="400" dy="0">Pragmatisme &</tspan>
+            <tspan class="hover-item svg-text" data-tooltip="pragmatic-praxis" x="400" dy="1.2em">Pratique réfléchie</tspan>
+          </text>        
+        
+          <text data-tooltip="Impermanence" x="0" y="700" font-size="80" fill="red"  text-anchor="middle" display="none">
+            <tspan class="hover-item svg-text" data-tooltip="Impermanence" x="400" dy="0">Impermanence</tspan>
+            <tspan class="hover-item svg-text" data-tooltip="Impermanence" x="400" dy="1.2em"></tspan>
+          </text>  
+             <!-- Use the double-arrow template -->
+        <use href="#double-arrow" x="0" y="150" transform="translate(0, -450) rotate(45, 200, 100)"/>
+        
+        <!-- Another instance with transformations -->
+        <use href="#double-arrow" x="0" y="150" transform="translate(520, -600) rotate(-45, 200, 100)"/>
+        
+        <!-- Another instance with transformations -->
+        <use href="#double-arrow" x="0" y="220" transform="translate(420, 30) rotate(90, 200, 100) "></use>/>
+        
+
+        </svg>
+    </div>
+    <div class="medium grid-item " style="display: block;align-items: top;width:100%;max-height: 600px; " >
+      
+      <div style="display: block;align-items: top; background-color: lightblue;"><div style="text-align: center;width:100%;font-size: 20px;">Panneau de définition</div>
+
+      <div id="manifeste" class="glossary-item">
+
+        <p>
+          Un <span class="important">manifeste</span> est un texte public exprimant des idées, des intentions, ou des revendications d'un individu ou d'un groupe, souvent dans un but de transformation ou de réforme sociale, politique ou culturelle. Il s'agit d'une déclaration publique visant à attirer l'attention sur une cause, mobiliser des adhérents, ou provoquer un changement.
+      </p>
+  
+      <p>
+          Le <span class="important">manifeste d'Open People Factory</span> aborde la nécessité de repenser les organisations, souvent inadaptées au <span class="context">contexte socio-économique et technologique actuel</span>. Face à la <span class="context">complexité digitale</span>, aux <span class="context">incertitudes socio-économiques</span> et aux <span class="context">disruptions environnementales</span>, il plaide pour la transition vers une organisation <span class="resilience">socio-technique résiliente</span> et <span class="resilience">antifragile</span>.
+      </p>
+  
+      <p>
+          Cette nouvelle forme d'organisation est capable de s'adapter aux chocs et aux crises, de tirer parti des incertitudes pour se renforcer, et de mieux répondre aux défis contemporains par une approche plus <span class="resilience">agile</span>, <span class="resilience">flexible</span> et <span class="resilience">durable</span>.
+      </p>
+
+      </div>
+      <div id="pilars" class="glossary-item">
+
+        <p>
+          Une <strong class="pillar">organisation socio-technique antifragile</strong> repose sur trois piliers fondamentaux : la <span class="knowledge">gestion de la connaissance</span>, l'<span class="architecture">architecture d'entreprise</span> et l'<span class="entrepreneurship">entreprenariat</span>. Ces piliers sont interconnectés à travers des actions intégrées, qu'elles soient <span class="integration">micro</span> ou <span class="integration">macro</span>, permettant une cohérence et une synergie entre les différents aspects de l'organisation.
+      </p>
+  
+      <p>
+          La <span class="modeling">modélisation formelle</span> joue un rôle crucial en fournissant des représentations structurées qui facilitent la <span class="vision">vision harmonisée</span> de l'ensemble des processus et systèmes. Cela permet de créer une <span class="understanding">compréhension partagée</span> parmi tous les membres de l'organisation, assurant ainsi que les actions menées sont alignées avec les objectifs communs et renforcent l'efficacité globale.
+      </p>
+  
+      <p>
+          En intégrant ces éléments, l'organisation peut non seulement <span class="knowledge">optimiser la gestion des connaissances</span> pour une meilleure <span class="architecture">coordination</span> entre les technologies et les processus humains, mais aussi stimuler un <span class="entrepreneurship">esprit d'initiative</span> qui favorise l'innovation et l'adaptabilité face aux défis, tout en assurant une résilience et une antifragilité accrues.
+      </p>
+
+      </div>
+      
+      <div id="organisation" class="glossary-item">
+
+        <p class="socio-technique">
+          Une <strong>Organisation Socio-Technique</strong> est un système qui intègre de manière étroite ses aspects humains, sociaux et technologiques pour mieux fonctionner dans un environnement complexe. En étant à la fois <span class="resilience">résiliente</span> et <span class="antifragile">antifragile</span>, elle développe des capacités qui lui permettent de s'adapter aux <span class="stress">chocs</span> et de prospérer dans l'incertitude.
+      </p>
+  
+      <p class="socio-technique">
+          Cette organisation utilise les perturbations comme des leviers de <span class="growth">croissance</span>, en se renforçant face aux crises grâce à une <span class="adaptation">flexibilité</span> accrue. Elle ne se contente pas de survivre aux défis mais les transforme en opportunités pour réinventer ses processus sociaux et technologiques, assurant ainsi une pérennité dans un monde imprévisible.
+      </p>
+
+      </div>
+     
+ 
+
+      <div id="resiliente-antifragile" class="glossary-item">
+
+        <p class="resilience">
+          Une organisation <strong>résiliente</strong> est capable de s'adapter rapidement et efficacement aux <span class="uncertainties">crises</span> et aux <span class="uncertainties">incertitudes</span> de son environnement. Elle met en place des structures flexibles qui lui permettent de <span class="adaptation">réagir rapidement</span> aux changements et de modifier ses processus lorsque nécessaire.
+      </p>
+  
+      <p class="resilience">
+          En plus de sa capacité à absorber les chocs, une organisation résiliente ne se contente pas de survivre : elle utilise ces défis comme une opportunité de <span class="growth">croître</span> et de se renforcer. Grâce à une culture d'innovation et à une grande <span class="adaptation">flexibilité</span>, elle devient plus robuste face aux imprévus tout en restant compétitive.
+      </p>
+      <p class="antifragile">
+        Une organisation <strong>antifragile</strong> ne se contente pas de résister aux <span class="stress">chocs</span> et aux <span class="stress">incertitudes</span>, mais elle s'améliore grâce à eux. Contrairement à une organisation simplement résiliente, qui cherche à maintenir son état initial face aux perturbations, l'antifragilité permet à l'organisation de <span class="growth">devenir plus forte</span> et d'apprendre de chaque situation stressante.
+    </p>
+
+    <p class="antifragile">
+        En cultivant une culture d'innovation et une grande <span class="adaptation">flexibilité</span>, une organisation antifragile profite des conditions d'instabilité pour innover et se réinventer. Les défis qu'elle rencontre ne sont pas des obstacles, mais des moteurs de <span class="growth">croissance</span> et de renforcement, lui permettant d'évoluer au-delà de ses limites initiales.
+    </p>
+       
+      </div>
+
+      <div id="inadaptation" class="glossary-item">
+
+        <p>
+          Les organisations traditionnelles sont de plus en plus <span class="rigid">inadaptées</span> au <span class="context">contexte socio-économico-technologique actuel</span>. Dans un monde marqué par des <span class="change">changements rapides</span> et imprévisibles, ces organisations restent souvent rigides, avec des structures hiérarchiques lourdes qui peinent à suivre le rythme de l'<span class="innovation">innovation technologique</span>. Cela limite leur capacité à s'adapter, à anticiper les perturbations, et à exploiter les opportunités émergentes dans un environnement en constante évolution.
+      </p>
+       
+      </div>
+      <div id="uncertainty" class="glossary-item">
+
+        <p>
+          Les <span class="uncertainties">incertitudes socio-économiques</span>, telles que l'instabilité des marchés financiers, les fluctuations des politiques gouvernementales, les crises géopolitiques et les inégalités sociales croissantes, compliquent l'environnement des entreprises. Ces facteurs rendent les conditions économiques imprévisibles et créent des <span class="uncertainties">chocs fréquents</span>, obligeant les organisations à s'adapter en permanence.
+      </p>
+  
+      <p>
+          Si ces <span class="uncertainties">incertitudes</span> rendent nécessaires la mise en place d'organisations <span class="resilience">résilientes</span> et <span class="resilience">antifragiles</span> capables de résister et de prospérer face à l'adversité, elles rendent également leur mise en œuvre complexe. L'<span class="adaptation">anticipation des risques</span>, l'<span class="adaptation">adaptation rapide</span> et la <span class="adaptation">flexibilité organisationnelle</span> sont difficiles à mettre en place dans un contexte aussi fluctuant, où les priorités et les ressources des entreprises doivent constamment évoluer.
+      </p>
+       
+      </div>  
+    
+      <div id="complexity" class="glossary-item">
+
+        <p>
+          La <span class="complexity">complexité digitale</span> freine l'adoption par les entreprises d'organisations <span class="resilience">résilientes</span> ou <span class="resilience">antifragiles</span> en raison de l'accélération des innovations technologiques et de la multiplication des outils numériques. Cette <span class="complexity">complexité</span> crée des <span class="impact">défis</span> liés à l'intégration des systèmes, à la gestion des données massives et à l'adaptation constante aux nouvelles technologies.
+      </p>
+  
+      <p>
+          Les entreprises, souvent bloquées par des infrastructures rigides et des compétences limitées en interne, peinent à réagir rapidement aux <span class="impact">changements</span>. Cela réduit leur capacité à anticiper, absorber les chocs et évoluer positivement face aux crises, rendant la transition vers des structures <span class="resilience">résilientes</span> ou <span class="resilience">antifragiles</span> plus difficile.
+      </p>
+       
+      </div>    
+      <div id="teams" class="glossary-item">
+
+        Les équipes pluri-disciplinaires à prendre en compte ...
+       
+      </div>   
+      
+      <div id="disciplines" class="glossary-item">
+
+        Les diverses disciplines requises ...
+       
+      </div> 
+      <div id="members" class="glossary-item">
+
+        Les divers membres des équipes Open People Factory ...
+       
+      </div>       
+            
+      <div id="contexte" class="glossary-item">
+
+        <p class="context">Le contexte socio-économico-technologique actuel est lié aux <span class="digital">difficultés à faire face à la complexité digitale</span>, aux <span class="uncertainties">incertitudes socio-économiques</span> ou aux <span class="disruptions">disruptions environnementales</span>.<br/><br/>
+          Le contexte est <span class="chaotic">chaotique, disruptif et incertain</span>, qu'il s'agisse du contexte :
+          </p>
+      
+          <p>
+              <ul>
+                  <li><span class="tech">Technologique</span> : les technologies émergentes et disruptives telles que l'IA, le Quantique, les blockchains, le cloud ou l'internet de toute chose côtoient des technologies hétérogènes variées et plus anciennes qui s'accumulent telles des couches sédimentaires.</li>
+                  <li><span class="environment">Environnemental</span> : la pollution, le réchauffement climatique, l'usage à outrance des ressources naturelles... nous font courir des risques écologiques et, par ricochet, socio-économiques.</li>
+                  <li><span class="socio-economic">Socio-économique</span> : du fait de la situation géopolitique et du passage nécessaire au post-capitalisme.</li>
+              </ul>
+          </p>
+       
+      </div>    
+      
+      <div id="disruption" class="glossary-item">
+
+        <p>
+          Les <span class="disruptions">disruptions environnementales</span> incluent des changements rapides et souvent imprévisibles qui affectent profondément les entreprises. Qu'elles soient <span class="technological">technologiques</span>, comme l'apparition de nouvelles innovations, <span class="environmental">environnementales</span>, comme le changement climatique ou la rareté des ressources, ou encore <span class="socio-political">socio-politiques</span>, comme des crises géopolitiques ou des mouvements sociaux, ces disruptions forcent les organisations à revoir leurs modèles.
+      </p>
+  
+      <p>
+          Pour survivre et prospérer dans cet environnement incertain, les entreprises doivent évoluer vers des structures <span class="resilience">résilientes</span> et <span class="resilience">antifragiles</span>, capables non seulement de résister aux chocs, mais aussi de tirer parti des incertitudes pour se renforcer.
+      </p>
+       
+      </div>
+      <div id="experts" class="glossary-item">
+
+        Les experts des équipes OPF ...
+       
+      </div>
+      <div id="domains" class="glossary-item">
+
+        Les domaines requis sont ...
+       
+      </div>      
+
+      <div id="cadre" class="glossary-item">
+
+        <p class="socio-technique">
+          Une <strong>Organisation Socio-Technique</strong> est un système qui intègre de manière étroite ses aspects humains, sociaux et technologiques pour mieux fonctionner dans un environnement complexe. En étant à la fois <span class="resilience">résiliente</span> et <span class="antifragile">antifragile</span>, elle développe des capacités qui lui permettent de s'adapter aux <span class="stress">chocs</span> et de prospérer dans l'incertitude.
+      </p>
+  
+      <p class="socio-technique">
+          Cette organisation utilise les perturbations comme des leviers de <span class="growth">croissance</span>, en se renforçant face aux crises grâce à une <span class="adaptation">flexibilité</span> accrue. Elle ne se contente pas de survivre aux défis mais les transforme en opportunités pour réinventer ses processus sociaux et technologiques, assurant ainsi une pérennité dans un monde imprévisible.
+      </p>
+       
+      </div>   
+      <div id="anti-fragile" class="glossary-item">
+        L'antifragilité est ...
+      </div>            
+      <div id="opf" class="glossary-item">
+
+        <p>
+          <span class="ecosystem">Open People Factory</span> est un écosystème de compétences <span class="high-value">à haute valeur ajoutée</span> qui fusionne harmonieusement la <span class="creativity">créativité</span> et la <span class="creativity">fonctionnalité</span> pour redéfinir l’excellence des entreprises dans un monde <span class="vuca">VICA</span> et un univers <span class="data-centric">data-centric</span>.
+      </p>
+  
+      <p>
+          Notre écosystème de services d’experts s’adresse à une clientèle <span class="clients">diversifiée</span>, allant des TPE aux ETI et aux Grandes Entreprises.
+      </p>
+
+      </div>
+    
+        <div id="interprenariat" class="glossary-item">
+
+          <p>Un <strong><span style="color:blue;">interpreneur</span></strong> est un individu qui combine les compétences et l'esprit d'initiative d'un entrepreneur avec un engagement envers les <span style="color:green;">causes sociales</span> ou <span style="color:green;">environnementales</span>.</p>
+
+          <p>Contrairement à un <strong><span style="color:blue;">entrepreneur traditionnel</span></strong>, dont l'objectif principal est souvent la création de <span style="color:orange;">valeur économique</span> et la <span style="color:orange;">croissance</span> d'une entreprise, l'interpreneur se concentre sur la <span style="color:red;">résolution de problèmes sociétaux</span> ou <span style="color:red;">environnementaux</span> tout en générant un <strong><span style="color:green;">impact positif</span></strong>.</p>
+
+          <p>Les interpreneurs cherchent à créer des <strong><span style="color:blue;">solutions innovantes</span></strong> qui répondent aux <span style="color:red;">besoins sociaux</span> ou <span style="color:red;">écologiques</span>, souvent en intégrant des <span style="color:green;">pratiques durables</span> dans leurs activités.</p>
+
+          <p>Ils peuvent opérer au sein d'<span style="color:green;">organisations à but non lucratif</span>, d'<span style="color:green;">entreprises sociales</span>, ou même de <strong><span style="color:blue;">startups à vocation sociale</span></strong>.</p>
+      
+          <p>Leur approche est caractérisée par une <strong><span style="color:blue;">vision</span></strong> qui allie la <span style="color:orange;">rentabilité économique</span> à la <span style="color:green;">responsabilité sociale</span>, visant à atteindre des objectifs à la fois <span style="color:orange;">financiers</span> et de <strong><span style="color:blue;">bien-être collectif</span></strong>.</p>
+
+        </div>
+        <div id="integrated-actions" class="glossary-item">
+
+          <p>Les <strong><span style="color:blue;">actions intégrées</span></strong>, des <span style="color:green;">procédures micro</span> aux <span style="color:green;">processus macro</span> comme les <span style="color:orange;">plans d'entreprise</span>, relient <span style="color:blue;">l'architecture d'entreprise</span>, la <span style="color:blue;">gestion de la connaissance</span> et l'<span style="color:blue;">entrepreneuriat</span>, créant une <span style="color:blue;">cohérence stratégique</span>.</p>
+          
+          <p>À un niveau <span style="color:green;">micro</span>, des <strong><span style="color:blue;">procédures claires</span></strong> assurent l'<span style="color:green;">efficacité des tâches quotidiennes</span>, tandis qu'à un niveau <span style="color:green;">macro</span>, les <span style="color:blue;">processus d'entreprise</span> alignent les <span style="color:orange;">objectifs à long terme</span> avec les <span style="color:orange;">actions immédiates</span>.</p>
+
+        <p>Cette <strong><span style="color:blue;">intégration</span></strong> structure l'<span style="color:blue;">architecture d'entreprise</span> et facilite la <span style="color:blue;">gestion de la connaissance</span> en <span style="color:green;">capturant</span>, <span style="color:green;">partageant</span> et <span style="color:green;">appliquant</span> les <span style="color:orange;">informations clés</span>, offrant aux <strong><span style="color:blue;">interpreneurs</span></strong> une base solide pour <span style="color:blue;">l'innovation</span> alignée sur les <span style="color:orange;">objectifs stratégiques</span>.</p>
+
+        <p>En consolidant ces éléments, les organisations développent <span style="color:blue;">résilience</span> et <span style="color:blue;">antifragilité</span>, leur permettant de s'<span style="color:green;">adapter</span> et <span style="color:green;">prospérer</span> dans un <span style="color:red;">environnement incertain</span>, en tirant parti des <span style="color:red;">disruptions</span> pour se renforcer.</p>
+
+        </div>
+
+        <div id="modeling"  class="glossary-item">
+
+          <p>La <strong><span style="color:blue;">modélisation formelle</span></strong> apporte une valeur clé aux entreprises cherchant à devenir <span style="color:blue;">résilientes</span> en structurant la <span style="color:blue;">gestion de la connaissance</span>, l'<span style="color:blue;">architecture d'entreprise</span> et l'<span style="color:blue;">interpreneuriat</span>.</p>
+
+          <p>Elle permet de <span style="color:green;">cartographier les informations critiques</span>, facilitant leur <span style="color:green;">accès</span> et leur <span style="color:green;">utilisation</span>.</p>
+          
+          <p>En <span style="color:blue;">architecture d'entreprise</span>, elle <span style="color:green;">clarifie les processus</span> et les <span style="color:blue;">structures</span>, permettant une <span style="color:green;">adaptation agile</span>.</p>
+          
+          <p>Pour les <strong><span style="color:blue;">interpreneurs</span></strong>, elle soutient l'<span style="color:blue;">innovation</span> en alignant les <span style="color:orange;">initiatives</span> avec les <span style="color:orange;">objectifs stratégiques</span>.</p>
+          
+          <p>En résumé, la <strong><span style="color:blue;">modélisation formelle</span></strong> renforce la <span style="color:blue;">résilience</span> en améliorant la <span style="color:blue;">gestion des ressources</span> et l'<span style="color:green;">adaptabilité</span> face aux défis.</p>
+          
+        </div>
+        <div id="common-harmonized-vision"  class="glossary-item">
+          
+          <p>Une <strong><span style="color:blue;">vision harmonisée</span></strong> joue un rôle essentiel dans le cadre de la transformation vers des organisations <span style="color:blue;">résilientes</span> et <span style="color:blue;">antifragiles</span> face à l'<span style="color:blue;">impermanence</span>.</p>
+
+          <p>Elle assure que tous les membres de l'organisation partagent une <span style="color:green;">compréhension commune</span> des <span style="color:orange;">objectifs</span> et des <span style="color:orange;">valeurs</span>, ce qui est fondamental pour naviguer efficacement dans un environnement en constante évolution.</p>
+
+          <p>Une vision harmonisée permet de <span style="color:green;">coordonner les actions</span>, d'<span style="color:green;">aligner les stratégies</span> et de maintenir une <span style="color:green;">direction claire</span> malgré les changements et les incertitudes.</p>
+
+          <p>Cela facilite également la <span style="color:green;">prise de décision cohérente</span>, renforce la <span style="color:green;">collaboration</span> entre les différentes parties prenantes et favorise une <span style="color:orange;">culture organisationnelle unifiée</span>.</p>
+
+          <p>En intégrant cette vision, les entreprises sont mieux équipées pour <span style="color:green;">anticiper et s'adapter aux défis</span>, transformer les perturbations en opportunités, et renforcer leur <span style="color:blue;">résilience globale</span> tout en développant des capacités <span style="color:blue;">antifragiles</span>.</p>
+
+        </div>
+        <div id="shared-understanding"   class="glossary-item">
+          
+          <p>La <strong><span style="color:blue;">compréhension partagée</span></strong> est d'une importance capitale dans le contexte de la transformation vers des organisations <span style="color:blue;">résilientes</span> et <span style="color:blue;">antifragiles</span> face à l'<span style="color:blue;">impermanence</span>.</p>
+
+          <p>Elle garantit que tous les membres de l'organisation ont une <span style="color:green;">vision commune</span> des <span style="color:orange;">objectifs</span>, des <span style="color:orange;">stratégies</span> et des <span style="color:orange;">priorités</span>, ce qui est essentiel pour naviguer avec succès dans un environnement <span style="color:green;">dynamique</span> et <span style="color:green;">incertain</span>.</p>
+          
+          <p>Une compréhension partagée facilite la <span style="color:green;">coordination</span> et l'<span style="color:green;">alignement</span> des efforts, réduit les <span style="color:green;">conflits</span> et les <span style="color:green;">malentendus</span>, et assure que les <span style="color:green;">actions</span> et les <span style="color:green;">décisions</span> sont prises dans un cadre <span style="color:green;">cohérent</span>.</p>
+          
+          <p>En favorisant une telle compréhension, les organisations peuvent renforcer la <span style="color:green;">collaboration</span>, améliorer la <span style="color:green;">réactivité</span> face aux <span style="color:green;">changements</span>, et mieux mobiliser les <span style="color:green;">ressources collectives</span> pour s'adapter et évoluer.</p>
+          
+          <p>Cette <span style="color:green;">cohérence interne</span> est fondamentale pour transformer les défis et les perturbations en <span style="color:green;">opportunités</span>, et pour construire une organisation capable de croître et de s'améliorer continuellement malgré les <span style="color:green;">imprévus</span>.</p>
+          
+        
+        </div>
+        <div id="pragmatic-praxis"  class="glossary-item">
+          <p class="section">
+            Dans la transformation vers des organisations <span style="color: blue;">résilientes</span> et <span style="color: blue;">antifragiles</span>, le <span style="color: green;">pragmatisme</span> et la <span style="color: green;">praxis</span> (ou pratique réfléchie) sont essentiels mais distincts.
+        </p>
+        
+        <p class="section">
+            Le <span style="color: green;">pragmatisme</span> se concentre sur des solutions pratiques aux problèmes réels, favorisant l’action en fonction de leur <span style="color: purple;">utilité</span> et <span style="color: purple;">réalisme</span>. Il s’agit d’adopter des stratégies qui répondent aux défis immédiats, axées sur les <span style="color: red;">résultats</span> et des résolutions <span style="color: red;">opérationnelles</span>.
+        </p>    
+        
+        <p class="section">
+            La <span style="color: green;">praxis</span>, ou pratique réfléchie, implique l'intégration de la <span style="color: purple;">réflexion</span> dans l'action, avec une évaluation continue de l’efficacité. Elle encourage une <span style="color: red;">adaptation</span> constante des stratégies en réponse aux retours d'expérience, tout en maintenant une vision à <span style="color: blue;">long terme</span>.
+        </p>
+        
+        <p class="section">
+            Le défi réside dans l’association de ces deux approches : le <span style="color: green;">pragmatisme</span> tend à privilégier des solutions <span style="color: red;">court-termistes</span> et immédiates, tandis que la <span style="color: green;">praxis</span> s'inscrit dans une continuité à <span style="color: blue;">long terme</span>. Trouver un équilibre entre l'efficacité immédiate et l’adaptabilité durable est crucial pour la réussite organisationnelle.
+        </p>
+        
+        <p class="section">
+            En résumé, le <span style="color: green;">pragmatisme</span> se concentre sur la mise en œuvre pratique des solutions, tandis que la <span style="color: green;">praxis</span> les affine en continu. Ensemble, ils aident les organisations à naviguer dans des environnements changeants, en conjuguant <span style="color: red;">réponses rapides</span> et <span style="color: blue;">vision à long terme</span>.
+        </p>
+        
+        
+        </div>
+        <div id="rigid-dynamic"  class="glossary-item">
+          
+          <p><strong><span style="color:red;">Culture Sclérosée (l'existant à changer)</span></strong> : Ce terme décrit une <span style="color:red;">culture organisationnelle</span> marquée par la <span style="color:red;">rigidité</span>, le <span style="color:red;">conformisme</span> et la <span style="color:red;">résistance au changement</span>. <br/>Une culture sclérosée est caractérisée par des <span style="color:red;">processus obsolètes</span>, une <span style="color:red;">faible innovation</span>, et une <span style="color:red;">aversion au risque</span>.<br/> Elle entraîne une <span style="color:red;">stagnation</span> et une <span style="color:red;">incapacité</span> à réagir efficacement aux <span style="color:red;">évolutions rapides</span> ou aux <span style="color:red;">perturbations externes</span>.</p>
+
+        <p><strong><span style="color:green;">Culture Dynamique (la cible à atteindre)</span></strong> : Ce terme représente une <span style="color:green;">culture</span> qui est <span style="color:green;">ouverte au changement</span>, <span style="color:green;">innovante</span>, et <span style="color:green;">adaptative</span>. Une culture dynamique favorise l'<span style="color:green;">agilité</span>, la <span style="color:green;">créativité</span>, et la <span style="color:green;">résilience</span>. Elle encourage la <span style="color:green;">prise de risques calculés</span>, l'<span style="color:green;">expérimentation</span>, et l'<span style="color:green;">apprentissage continu</span>. Les organisations avec une culture dynamique sont mieux équipées pour s'adapter aux <span style="color:green;">défis complexes</span> et pour se renforcer à travers les <span style="color:green;">perturbations</span>.</p>
+
+
+        </div>
+        <div id="impermanence"   class="glossary-item">
+
+          <p><span style="color:darkorange;"><strong>Impermanence</strong></span> désigne la <span style="color:coral;">nature transitoire</span> et en <span style="color:coral;">constante évolution</span> des circonstances, des conditions et des événements.</p>
+
+          <p><span style="color:#E74C3C;">Dans le contexte des organisations modernes</span>, l'impermanence souligne l'<span style="color:#F1C40F;">absence de stabilité</span> et de <span style="color:#F1C40F;">prévisibilité</span>, signifiant que les entreprises doivent faire face à des <span style="color:#E67E22;">changements fréquents</span> et <span style="color:#E67E22;">imprévus</span>.</p>
+          
+          <p>Cette <span style="color:#E74C3C;">caractéristique</span> a un impact significatif sur les organisations, car elle exige une grande <span style="color:#2ECC71;">adaptabilité</span> et une <span style="color:#2ECC71;">capacité à réagir rapidement</span> aux <span style="color:#1F8A70;">fluctuations</span> et aux <span style="color:#1F8A70;">disruptions</span>.</p>
+          
+          <p>L'impermanence implique que les organisations doivent constamment <span style="color:#2ECC71;">ajuster leurs stratégies</span> et leurs <span style="color:#2ECC71;">opérations</span> pour s'aligner avec les <span style="color:#1F8A70;">nouvelles réalités</span> et <span style="color:#1F8A70;">défis</span>.</p>
+          
+          <p>Cela renforce la nécessité d'une <span style="color:#3498DB;">gestion proactive des risques</span>, d'une <span style="color:#3498DB;">flexibilité organisationnelle</span> et d'une <span style="color:#3498DB;">culture de l'innovation</span> pour naviguer efficacement dans un environnement où la constance est rare et les <span style="color:#1F8A70;">conditions</span> peuvent évoluer rapidement.</p>
+          
+
+        </div>
+        <div id="fix-fluid" class="glossary-item">
+
+          <p><span style="color:red;"><strong>Fixité</strong></span> (l'existant à changer) : Ce terme décrit une situation où les individus et les organisations adoptent une approche <span style="color:red;">rigide</span> et <span style="color:red;">stagnante</span>, caractérisée par une <span style="color:red;">résistance au changement</span>, une <span style="color:red;">stabilité excessive</span>, et une <span style="color:red;">déconnexion</span> des dynamiques évolutives.<br/> La fixité mène à une <span style="color:red;">incapacité à s'adapter</span> aux <span style="color:red;">nouvelles réalités</span> et à une <span style="color:red;">vulnérabilité accrue</span> aux perturbations et aux évolutions rapides de l'environnement.</p>
+
+          <p><span style="color:green;"><strong>Fluidité</strong></span> (la cible à atteindre) : Ce terme représente une <span style="color:green;">capacité à s'adapter rapidement</span> aux <span style="color:green;">changements</span>, à embrasser les <span style="color:green;">dynamiques de l'impermanence</span>, et à s'ajuster en fonction des <span style="color:green;">nouvelles informations</span> et des <span style="color:green;">contextes en évolution</span>. La fluidité implique une approche <span style="color:green;">souple</span>, <span style="color:green;">réactive</span>, et <span style="color:green;">innovante</span>, où les individus et l'organisation acceptent et exploitent les <span style="color:green;">changements</span> comme des opportunités de croissance et d'amélioration.</p>
+          
+
+        </div>
+        <div id="knowhowtobe-mindset"  class="glossary-item">
+
+          <p>Le <span style="color:blue;"><strong>savoir-être</strong></span> et <span style="color:blue;"><strong>l'état d'esprit</strong></span> concernent tous deux les individus.</p>
+
+          <p>Le <span style="color:blue;"><strong>savoir-être</strong></span> se réfère aux <span style="color:blue;">compétences</span> et <span style="color:blue;">qualités personnelles</span> qui influencent la manière dont une personne se comporte et interagit avec les autres dans divers contextes, notamment professionnels et sociaux.</p>
+
+          <p>Il inclut des aspects tels que les <span style="color:blue;">compétences interpersonnelles</span>, l'<span style="color:blue;">attitude professionnelle</span>, et la <span style="color:blue;">gestion des émotions</span>.</p>
+
+          <p>Le savoir-être englobe des traits comme la capacité à <span style="color:blue;">communiquer efficacement</span>, à <span style="color:blue;">écouter activement</span>, à faire preuve d'<span style="color:blue;">empathie</span>, ainsi qu'à maintenir un comportement <span style="color:blue;">respectueux</span>, <span style="color:blue;">fiable</span>, et <span style="color:blue;">engagé</span> dans ses responsabilités.</p>
+
+          <p>En somme, il s'agit des <span style="color:blue;">attitudes</span> et <span style="color:blue;">comportements</span> qui favorisent une interaction harmonieuse et productive avec les autres.</p>
+        
+        </div>
+        <div id="rigidity-adaptability"  class="glossary-item">
+
+          <p><span style="color:red;"><strong>Rigidité</strong></span> (l'existant à changer) : Ce terme caractérise un état mental et comportemental marqué par la <span style="color:red;">résistance au changement</span>, le <span style="color:red;">conformisme</span>, la <span style="color:red;">peur de l'incertitude</span> et une <span style="color:red;">vision figée</span> des processus et des rôles.<br/> Dans cet état, les individus et les organisations sont vulnérables aux <span style="color:red;">perturbations externes</span> car ils manquent de <span style="color:red;">flexibilité</span>, d'<span style="color:red;">adaptabilité</span> et de <span style="color:red;">résilience</span> face aux bouleversements.</p>
+
+          <p><span style="color:green;"><strong>Adaptabilité ou Agilité Antifragile</strong></span> (la cible à atteindre) : Ce terme combine deux concepts : l'<span style="color:green;">agilité</span>, qui décrit la capacité à réagir rapidement et efficacement aux changements, et l'<span style="color:green;">antifragilité</span>, qui va au-delà de la simple résilience.<br/> Une organisation ou un individu antifragile non seulement résiste aux chocs, mais en <span style="color:green;">tire parti</span> pour se renforcer et grandir.<br/> Ici, le <span style="color:green;">savoir-être</span> se traduit par l'<span style="color:green;">adaptabilité</span>, la <span style="color:green;">collaboration</span> et la <span style="color:green;">gestion des émotions</span>, tandis que le <span style="color:green;">mindset de croissance</span> alimente l'<span style="color:green;">innovation</span> et l'<span style="color:green;">apprentissage</span> dans l'incertitude.</p>
+          
+
+        </div>
+        <div id="know-knowto"  class="glossary-item">
+          <p style="color: black;">
+            <strong><span style="color: red;">Savoir non opérationnalisé </span></strong>(l'existant à changer)<br>
+            De nombreuses organisations accumulent des connaissances théoriques, mais celles-ci restent souvent inexploitées. Elles sont documentées, partagées entre experts, mais peu accessibles aux praticiens. Cette déconnexion ralentit l'innovation et l'adaptation, limitant l'efficacité et la résilience organisationnelles.
+        </p>
+        
+        <p style="color: black;">
+            <strong><span style="color: green;">Savoir opérationnalisé</span></strong> (la cible à atteindre)<br>
+            Dans une organisation résiliente, le savoir devient savoir-faire, c'est-à-dire des compétences appliquées. L'accès à la connaissance est facilité, les formations orientées vers l'action et les pratiques constamment mises à jour. Cela rend les équipes autonomes et capables de s'adapter, renforçant l'organisation face aux environnements changeants.
+        </p>
+        
+
+        </div>
+
+        <div id="operationnalization"  class="glossary-item">
+
+          <p>L'<span style="color:blue;"><strong>opérionnalisation</strong></span> du savoir permet de développer le <span style="color:blue;">savoir-faire</span>.</p>
+          
+          <p>C'est un <span style="color:blue;">levier fondamental</span> pour transformer la théorie en <span style="color:blue;">pratique efficace</span>.</p>
+
+          <p>Dans un contexte <span style="color:blue;">chaotique et complexe</span>, un changement de comportement s'impose pour permettre à l'organisation de mieux naviguer à travers l'<span style="color:blue;">incertitude</span>.</p>
+          
+          <p>L'axe d'amélioration réside dans la capacité à passer du <span style="color:blue;">simple savoir</span> — souvent théorique et abstrait — à un <span style="color:blue;">savoir-faire</span> ancré dans l'<span style="color:blue;">action</span>.</p>
+          
+          <p>Cela implique de rendre les connaissances non seulement accessibles, mais directement <span style="color:blue;">applicables</span> dans les <span style="color:blue;">processus</span> et les pratiques quotidiennes.</p>
+          
+          <p>En opérationnalisant le savoir, l'organisation se dote de moyens concrets pour réagir de manière <span style="color:blue;">proactive</span> aux défis émergents, tout en renforçant sa capacité à <span style="color:blue;">innover</span> et à s’adapter dans un environnement en perpétuelle évolution.</p>
+
+        </div>
+        <div id="individual-collective"  class="glossary-item">
+          <p style="color: black;">
+            <strong><span style="color: red;">Individualisme</span></strong> (situation actuelle à changer)<br>
+            Dans de nombreuses organisations, l'individualisme prédomine. Les connaissances sont souvent centralisées chez certaines personnes et partagées de manière limitée. Ce manque de collaboration freine la circulation du savoir, isole les compétences et rend l'organisation plus vulnérable aux imprévus. Cette fragmentation empêche une utilisation optimale des ressources et des talents.
+        </p>
+ 
+        <p style="color: black;">
+            <strong><span style="color: green;">Collectif</span></strong> (cible à atteindre)<br>
+            Une organisation résiliente et antifragile valorise le collectif. Le partage des connaissances est fluide, transparent et accessible à tous. Chaque membre contribue à l'enrichissement du savoir commun, ce qui favorise la solidarité et renforce la capacité de l'organisation à s'adapter et à innover ensemble. Le collectif devient la clé d'une performance durable.
+        </p>
+        </div>
+
+        <div id="partage"  class="glossary-item">
+          
+          <p>Dans le domaine de la gestion de la connaissance, le <span style="color:blue;"><strong>partage</strong></span> désigne le processus par lequel les individus ou les groupes diffusent et échangent des informations, des compétences, et des expériences au sein d'une organisation ou d'une communauté.</p>
+          
+          <p>Il vise à faciliter l'accès aux <span style="color:blue;">connaissances</span>, à promouvoir la <span style="color:blue;">collaboration</span> et à garantir que les savoirs pertinents sont disponibles pour ceux qui en ont besoin.</p>
+          
+          <p>Le <span style="color:blue;">partage de la connaissance</span> permet d'optimiser l'utilisation des <span style="color:blue;">ressources intellectuelles</span>, de favoriser l'<span style="color:blue;">innovation</span> et d'améliorer la <span style="color:blue;">prise de décision</span> en mettant en commun les expertises et les insights.</p>
+          
+          <p>Il peut se manifester par divers moyens tels que les <span style="color:blue;">réunions</span>, les <span style="color:blue;">plateformes de collaboration</span>, les <span style="color:blue;">documents partagés</span>, et les <span style="color:blue;">formations</span>, et il est essentiel pour renforcer la <span style="color:blue;">cohésion</span> et la <span style="color:blue;">performance organisationnelle</span>.</p>
+
+        </div>
+        <div id="tacit-explicit"  class="glossary-item">
+          <p style="color: black;">
+            <strong><span style="color: red;">Savoir tacite</span></strong>(situation actuelle à changer)<br>
+            Aujourd'hui, une grande partie du savoir dans les organisations reste tacite, c'est-à-dire non formalisé et détenu de manière informelle par les individus. Ce savoir, difficile à transmettre, limite la collaboration et crée une dépendance vis-à-vis de certaines personnes clés. Le manque de formalisation empêche sa diffusion à grande échelle et réduit la résilience organisationnelle.
+        </p>
+
+        <p style="color: black;">
+          <strong><span style="color: green;">Savoir explicité</span></strong> (situation cible à atteindre)<br>
+          Dans une organisation résiliente, le savoir tacite est transformé en savoir explicité, formalisé et accessible à tous. Ce processus de mise en commun permet de capitaliser sur l'expérience de chacun, tout en facilitant le partage et la transmission des compétences. Le savoir devient une ressource collective, renforçant la capacité d'adaptation et l'innovation au sein de l'organisation.
+      </p>
+
+        </div>
+        <div id="patrimoine"  class="glossary-item">
+
+          <p>Le <span style="color:blue;"><strong>patrimoine de connaissance</strong></span> désigne l'ensemble des connaissances, savoir-faire, informations et compétences accumulés et préservés au sein d'une organisation, d'une communauté ou d'une société.</p>
+          
+          <p>Il comprend à la fois les connaissances explicites, telles que les <span style="color:blue;">documents</span>, les <span style="color:blue;">bases de données</span> et les <span style="color:blue;">publications</span>, et les connaissances tacites, qui incluent les <span style="color:blue;">expériences</span>, les <span style="color:blue;">pratiques</span> et les <span style="color:blue;">compétences informelles</span> des individus.</p>
+          
+          <p>Le patrimoine de connaissance est précieux car il représente un réservoir de ressources intellectuelles qui peut être utilisé pour <span style="color:blue;">prendre des décisions éclairées</span>, <span style="color:blue;">innover</span> et maintenir un <span style="color:blue;">avantage compétitif</span>.</p>
+          
+          <p>La gestion efficace de ce patrimoine permet de préserver et de transmettre les <span style="color:blue;">savoirs essentiels</span>, assurant ainsi la continuité et le développement des <span style="color:blue;">capacités</span> et des <span style="color:blue;">compétences</span> au fil du temps.</p>
+
+        </div>
+        <div id="KM"  class="glossary-item">
+
+          <p>La <span style="color:blue;"><strong>gestion de la connaissance</strong></span> se réfère à l'ensemble des pratiques, processus et outils visant à <span style="color:blue;">identifier</span>, <span style="color:blue;">capturer</span>, <span style="color:blue;">organiser</span>, <span style="color:blue;">partager</span> et <span style="color:blue;">utiliser</span> les connaissances au sein d'une organisation ou d'une communauté.</p>
+
+          <p>Elle implique la mise en place de <span style="color:blue;">stratégies</span> pour tirer parti de l'<span style="color:blue;">expertise</span>, des <span style="color:blue;">expériences</span> et des <span style="color:blue;">informations disponibles</span>, dans le but d'améliorer la <span style="color:blue;">prise de décision</span>, d'<span style="color:blue;">optimiser l'efficacité opérationnelle</span> et de favoriser l'<span style="color:blue;">innovation</span>.</p>
+
+          <p>La gestion de la connaissance cherche à <span style="color:blue;">maximiser la valeur</span> des connaissances collectives en facilitant leur <span style="color:blue;">accessibilité</span> et leur <span style="color:blue;">application</span>.</p>
+
+
+        </div>
+
+        <div id="siloted-connected"  class="glossary-item">
+
+          <p><span style="color:red;"><strong>Données Silotées</strong></span> (l'existant à changer) : Ce terme décrit une situation où les données sont <span style="color:red;">fragmentées</span>, <span style="color:red;">inaccessibles</span> et <span style="color:red;">isolées</span> au sein de différents départements ou systèmes.<br/> Les données silotées créent des <span style="color:red;">barrières à la prise de décision</span>, entraînent des <span style="color:red;">décisions incohérentes</span> et rendent l’organisation <span style="color:red;">vulnérable aux perturbations</span>, car les informations ne circulent pas librement ni de manière intégrée.<br/>Cela limite l'<span style="color:red;">agilité</span> et la <span style="color:red;">résilience</span>, empêchant les équipes de s'adapter rapidement à l'incertitude.</p>
+
+          <p><span style="color:green;"><strong>Données Connectées</strong></span> (la cible à atteindre): Ce terme décrit une situation où les données sont <span style="color:green;">interconnectées</span>, <span style="color:green;">accessibles</span> et <span style="color:green;">intégrées</span> de manière fluide dans l'organisation.<br/> Les données connectées permettent une <span style="color:green;">prise de décision plus informée</span>, <span style="color:green;">rapide</span> et <span style="color:green;">cohérente</span> dans des environnements complexes.<br/> Cela renforce la <span style="color:green;">résilience</span> et l'<span style="color:green;">antifragilité</span>, car une organisation peut utiliser des données <span style="color:green;">fiables</span> et <span style="color:green;">partagées</span> pour s'adapter et tirer parti des incertitudes.<br/> En connectant les données de manière fluide, l’organisation devient capable d’<span style="color:green;">apprendre</span> et de <span style="color:green;">croître</span> à partir des perturbations.</p>
+
+
+        </div>
+        <div id="data"   class="glossary-item">
+
+          <p>Dans le cadre de l'<span style="color:blue;"><strong>architecture d'entreprise</strong></span>, les <span style="color:blue;"><strong>données</strong></span> désignent les <span style="color:blue;">informations structurées et non structurées</span> qui sont <span style="color:blue;">collectées</span>, <span style="color:blue;">stockées</span>, <span style="color:blue;">traitées</span> et <span style="color:blue;">utilisées</span> pour soutenir les <span style="color:blue;">processus métier</span> et les <span style="color:blue;">décisions stratégiques</span> de l'organisation.</p>
+
+          <p>Elles incluent les <span style="color:blue;">enregistrements</span>, les <span style="color:blue;">fichiers</span>, les <span style="color:blue;">bases de données</span> et les <span style="color:blue;">ensembles d'informations</span> qui sont essentiels pour le fonctionnement efficace de l'organisation.</p>
+          
+          <p>Les données peuvent représenter divers types d'informations, telles que les <span style="color:blue;">transactions commerciales</span>, les <span style="color:blue;">informations clients</span>, les <span style="color:blue;">données financières</span> et les <span style="color:blue;">détails opérationnels</span>.</p>
+          
+          <p>La <span style="color:blue;">gestion des données</span> dans l'architecture d'entreprise vise à assurer leur <span style="color:blue;">intégrité</span>, leur <span style="color:blue;">accessibilité</span>, leur <span style="color:blue;">sécurité</span> et leur <span style="color:blue;">alignement</span> avec les <span style="color:blue;">objectifs</span> et les <span style="color:blue;">besoins stratégiques</span> de l'organisation.</p>
+          
+
+        </div>
+        <div id="fragment-anchor"  class="glossary-item">
+          <p>
+            <span style="color:red;"><strong>Contextes Fragmentés</strong></span> (l'existant à changer) :<br>
+            Ce terme décrit une situation où les décisions et les comportements sont pris ou adoptés sans une <span style="color:blue;">vue d’ensemble claire</span> du <span style="color:blue;">contexte global</span>. 
+            Les contextes fragmentés se caractérisent par une <span style="color:blue;">compréhension partielle</span> ou <span style="color:blue;">incohérente</span> des environnements internes et externes, 
+            ce qui entraîne une <span style="color:blue;">mauvaise coordination</span>, des <span style="color:blue;">décisions isolées</span> et des <span style="color:blue;">réponses inefficaces</span> face aux <span style="color:blue;">événements perturbateurs</span>. 
+            Cela fragilise l'organisation, la rendant <span style="color:blue;">vulnérable</span> à l'<span style="color:blue;">incertitude</span> et au <span style="color:blue;">chaos</span>.
+          </p>
+          
+          <p>
+            <span style="color:green;"><strong>Conscience Contextuelle</strong></span> (la cible à atteindre) :<br>
+            Ce terme décrit une situation où les <span style="color:blue;">individus</span> et l'<span style="color:blue;">organisation</span> dans son ensemble ont une <span style="color:blue;">vision holistique</span> et <span style="color:blue;">partagée</span> de leur <span style="color:blue;">environnement</span>. 
+            La conscience contextuelle implique une prise en compte <span style="color:blue;">dynamique</span> des <span style="color:blue;">facteurs internes</span> (comme les <span style="color:blue;">processus</span> et la <span style="color:blue;">culture</span>) 
+            et <span style="color:blue;">externes</span> (marché, régulations, concurrence) qui influencent les <span style="color:blue;">actions</span> et les <span style="color:blue;">décisions</span>. 
+            Elle permet à l'organisation d'être plus <span style="color:blue;">réactive</span>, <span style="color:blue;">adaptable</span> et <span style="color:blue;">antifragile</span>, car elle peut <span style="color:blue;">anticiper</span> et <span style="color:blue;">répondre</span> aux <span style="color:blue;">évolutions</span> et aux <span style="color:blue;">perturbations</span> avec plus de <span style="color:blue;">cohérence</span> et d’<span style="color:blue;">agilité</span>.
+          </p>
+          
+
+        </div>
+        <div id="context"  class="glossary-item">
+
+          <p>
+            Dans le cadre de l'architecture d'entreprise, le <span style="color:blue;"><strong>contexte opérationnel</strong></span> désigne l'ensemble des <span style="color:blue;">conditions</span> et des <span style="color:blue;">facteurs</span> 
+            qui influencent les <span style="color:blue;">opérations</span> et les <span style="color:blue;">activités quotidiennes</span> d'une organisation.
+          </p>
+          
+          <p>
+            Il inclut les aspects liés à l'<span style="color:blue;">environnement interne</span> et <span style="color:blue;">externe</span> dans lequel l'organisation évolue, 
+            tels que les <span style="color:blue;">exigences des clients</span>, les <span style="color:blue;">processus métier</span>, les <span style="color:blue;">contraintes technologiques</span>, les <span style="color:blue;">ressources disponibles</span>, 
+            ainsi que les <span style="color:blue;">réglementations</span> et les <span style="color:blue;">tendances du marché</span>.
+          </p>
+          
+          <p>
+            Le contexte opérationnel aide à situer les <span style="color:blue;">besoins</span> et les <span style="color:blue;">défis spécifiques</span> auxquels l'organisation est confrontée, 
+            en fournissant une <span style="color:blue;">base</span> pour la <span style="color:blue;">conception</span> et l'<span style="color:blue;">adaptation</span> des <span style="color:blue;">structures</span>, des <span style="color:blue;">processus</span> et des <span style="color:blue;">systèmes</span> 
+            au sein de l'architecture d'entreprise.
+          </p>
+          
+          <p>
+            Il permet ainsi de garantir que les <span style="color:blue;">solutions architecturales</span> sont alignées avec la <span style="color:blue;">réalité opérationnelle</span> 
+            et les <span style="color:blue;">objectifs stratégiques</span> de l'organisation.
+          </p>
+          
+          
+        </div>
+        <div id="ambiguity-clarity"   class="glossary-item">
+
+          <p>
+            <b><span style="color:blue;">Ambiguïté</span> (l'existant à changer) :</b><br>
+            Ce terme décrit une situation où le <span style="color:blue;">sens</span> est <span style="color:blue;">flou</span>, <span style="color:blue;">mal défini</span> ou <span style="color:blue;">interprété de manière divergente</span> par différents acteurs. 
+            L'ambiguïté dans la <span style="color:blue;">sémantique</span> d'une organisation mène à des <span style="color:blue;">incompréhensions</span>, des <span style="color:blue;">décisions inefficaces</span> et des <span style="color:blue;">pertes d'efficacité</span>, 
+            en particulier dans des <span style="color:blue;">environnements complexes</span> et <span style="color:blue;">chaotiques</span>. 
+            L'ambiguïté empêche l'<span style="color:blue;">alignement des actions</span>, la <span style="color:blue;">cohérence des processus</span> et la <span style="color:blue;">prise de décisions éclairée</span>.
+          </p>
+          
+          <p>
+            <b><span style="color:blue;">Clarté Sémantique</span> (la cible à atteindre):</b><br>
+            Ce terme met l'accent sur une <span style="color:blue;">compréhension partagée</span>, <span style="color:blue;">précise</span> et <span style="color:blue;">cohérente</span> des <span style="color:blue;">termes</span>, <span style="color:blue;">concepts</span> et <span style="color:blue;">processus</span> au sein de l'organisation. 
+            La clarté sémantique permet d'<span style="color:blue;">aligner les comportements</span> et les <span style="color:blue;">actions</span> autour d'un <span style="color:blue;">cadre commun de signification</span>, 
+            facilitant ainsi la <span style="color:blue;">résilience</span> et l'<span style="color:blue;">antifragilité</span>. 
+            Cela permet de <span style="color:blue;">naviguer dans la complexité</span> avec plus d'<span style="color:blue;">assurance</span>, car les parties prenantes comprennent mieux les <span style="color:blue;">objectifs</span>, 
+            les <span style="color:blue;">stratégies</span> et les <span style="color:blue;">rôles</span>.
+          </p>         
+          
+        </div>
+        <div id="semantic"   class="glossary-item">
+
+          <p>
+            Dans le cadre de l'<span style="color:blue;">architecture d'entreprise</span>, la <span style="color:blue;">sémantique</span> se réfère à l'étude et à l'organisation des significations des <span style="color:blue;">termes</span>, 
+            <span style="color:blue;">concepts</span> et <span style="color:blue;">relations</span> utilisés pour modéliser les différents aspects de l'organisation.
+          </p>
+          
+          <p>
+            Elle concerne la <span style="color:blue;">précision</span> et la <span style="color:blue;">clarté</span> des <span style="color:blue;">définitions</span> des éléments architecturaux, tels que les <span style="color:blue;">processus métier</span>, 
+            les <span style="color:blue;">systèmes d'information</span> et les <span style="color:blue;">structures organisationnelles</span>, afin d'assurer une <span style="color:blue;">compréhension commune</span> et <span style="color:blue;">cohérente</span> 
+            au sein de l'organisation.
+          </p>
+          
+          <p>
+            La sémantique joue un rôle crucial dans l'établissement d'un <span style="color:blue;">langage partagé</span> et dans la création de <span style="color:blue;">modèles</span> et de <span style="color:blue;">représentations</span> 
+            qui facilitent l'<span style="color:blue;">analyse</span>, la <span style="color:blue;">communication</span> et la <span style="color:blue;">gestion efficace</span> des <span style="color:blue;">ressources</span> et des <span style="color:blue;">informations</span> 
+            dans l'architecture d'entreprise.
+          </p>
+          
+          
+        </div>
+        <div id="AE"   class="glossary-item">
+
+          <p>
+            L'<span style="color:blue;">architecture d'entreprise</span> est une discipline qui vise à structurer et aligner les <span style="color:blue;">composants essentiels</span> d'une organisation, tels que ses <span style="color:blue;">processus</span>, ses <span style="color:blue;">systèmes d'information</span>, ses <span style="color:blue;">structures organisationnelles</span> et ses <span style="color:blue;">technologies</span>, afin d'atteindre ses <span style="color:blue;">objectifs stratégiques</span>.
+          </p>
+          <p>
+            Elle fournit un <span style="color:blue;">cadre de référence</span> pour décrire et gérer les différentes couches de l'organisation, assurant que tous les éléments sont <span style="color:blue;">cohérents</span> et <span style="color:blue;">intégrés</span> de manière optimale.
+          </p>
+          <p>
+            L'architecture d'entreprise permet de garantir que les <span style="color:blue;">ressources</span> et les <span style="color:blue;">capacités</span> de l'organisation sont alignées avec sa <span style="color:blue;">vision</span> et ses <span style="color:blue;">objectifs stratégiques</span>, tout en favorisant l'<span style="color:blue;">agilité</span>, l'<span style="color:blue;">efficacité</span> et l'<span style="color:blue;">innovation</span>.
+          </p>
+          </div>
+        
+          
+          <div id="culture" class="glossary-item">
+
+            <p>
+              La <span style="color:#2C3E50;">culture</span> se réfère à l'ensemble des <span style="color:#34495E;">valeurs</span>, <span style="color:#34495E;">croyances</span>, <span style="color:#34495E;">pratiques</span>, <span style="color:#34495E;">comportements</span> et <span style="color:#34495E;">traditions</span> qui caractérisent un groupe social ou une organisation.
+            </p>
+            
+            <p>
+              Elle englobe les <span style="color:#2C3E50;">normes sociales</span>, les <span style="color:#2C3E50;">coutumes</span> et les <span style="color:#2C3E50;">habitudes</span> qui influencent la manière dont les individus interagissent et collaborent au sein de ce groupe.
+            </p>
+            
+            <p>
+              Une culture <span style="color:#27AE60;">constructive</span> est essentielle pour les <span style="color:#27AE60;">entrepreneurs résilients</span>, car elle favorise un environnement où les membres de l'organisation se soutiennent mutuellement, embrassent les <span style="color:#27AE60;">défis</span> comme des <span style="color:#27AE60;">opportunités de croissance</span>, et adoptent des <span style="color:#27AE60;">attitudes positives</span> face aux changements.
+            </p>
+            
+            <p>
+              Une telle culture encourage la <span style="color:#27AE60;">créativité</span>, la <span style="color:#27AE60;">collaboration</span> et l'<span style="color:#27AE60;">innovation</span>, et aide les individus à surmonter les <span style="color:#27AE60;">obstacles</span> avec une approche <span style="color:#27AE60;">proactive</span> et <span style="color:#27AE60;">adaptable</span>.
+            </p>
+            
+            <p>
+              En somme, la culture constructive joue un rôle clé dans la réussite entrepreneuriale en créant un cadre propice à la <span style="color:#27AE60;">résilience</span>, à l'<span style="color:#27AE60;">engagement</span> et à la réalisation des objectifs.
+            </p>
+            
+        
+      </div>
+      <div id="mindset"   class="glossary-item">
+        
+        <p>
+          Le <span style="color:blue;">savoir-être</span> et l'<span style="color:blue;">état d'esprit</span> concernent tous deux les individus.
+        </p>
+        
+        <p>
+          L'<span style="color:blue;">état d'esprit</span> se réfère à l'ensemble des <span style="color:blue;">attitudes</span>, <span style="color:blue;">croyances</span> et <span style="color:blue;">dispositions mentales</span> qui influencent la manière dont une personne perçoit et réagit aux situations.
+        </p>
+        
+        <p>
+          Il englobe la façon dont un individu <span style="color:blue;">interprète</span> les événements, gère les <span style="color:blue;">défis</span> et aborde les <span style="color:blue;">opportunités</span>.
+        </p>
+        
+        <p>
+          Un état d'esprit <span style="color:blue;">constructif</span> est particulièrement important pour les <span style="color:blue;">entrepreneurs résilients</span>, car il implique une <span style="color:blue;">attitude positive</span>, une <span style="color:blue;">ouverture au changement</span> et une capacité à voir les <span style="color:blue;">difficultés</span> comme des <span style="color:blue;">opportunités d'apprentissage</span> et de <span style="color:blue;">croissance</span>.
+        </p>
+        
+        <p>
+          Ce type d'état d'esprit favorise la <span style="color:blue;">créativité</span>, l'<span style="color:blue;">innovation</span> et la <span style="color:blue;">persévérance</span>, permettant aux individus de surmonter les <span style="color:blue;">obstacles</span>, d'ajuster leurs <span style="color:blue;">stratégies</span> et de poursuivre leurs <span style="color:blue;">objectifs</span> avec <span style="color:blue;">détermination</span> et <span style="color:blue;">flexibilité</span>.
+        </p>
+        
+        <p>
+          En somme, l'état d'esprit constructif joue un rôle crucial dans le succès entrepreneurial en encourageant une approche <span style="color:blue;">proactive</span> et <span style="color:blue;">adaptative</span> face aux défis.
+        </p>
+        
+        
+        </div>
+            
+      </div>
+      
+    </div>
+    <div class="grid-item blank">
+   </div>
+    
+    <div class="grid-item" style="display: block;text-align: center;background-color: rgba(255, 255, 0, 0.5);"</div>
+      <span style="color:red ;" class="svg-text hover-item" data-tooltip="inadaptation">Organisation inadaptée</span> au </span><span style="color:blue ;" class="svg-text hover-item" data-tooltip="contexte">contexte socio-économico-technologique actuel</span><br/>
+        <span style="color:darkorange ;" class="svg-text hover-item" data-tooltip="complexity">Complexité digitale</span>, 
+        <span style="color:darkorange ;" class="svg-text hover-item" data-tooltip="uncertainty">Incertitudes socio-économiqe</span>, <span style="color:darkorange ;" class="svg-text hover-item" data-tooltip="disruption">Disruptions environnementales</span>
+    </div>
+    <div class="grid-item blank"></div>
+    <div class="grid-item blank" ></div>
+    <div class="grid-item medium">      
+          <ul style="text-align: left;padding-left: 1px;display:box;">
+            Ce qu'apporte <span style="color:black" class="svg-text  hover-item" data-tooltip="opf">Open People Factory</span>
+            <ul>
+            <ul>
+              <li><span style="color:black" class="svg-text  hover-item" data-tooltip="teams">des équipes</span> <span style="color:black" class="svg-text hover-item" data-tooltip="disciplines">pluri-disciplinaires </span>constituées de <span style="color:black" class="svg-text  hover-item" data-tooltip="members">membres</span></li>
+              
+            <li><span style="color:blue;" class="svg-text hover-item" data-tooltip="experts">experts</span> dans un ou plusieurs des <span style="color:blue;" class="svg-text hover-item" data-tooltip="domains">domaines requis</span> pour votre organisation</li>
+            <li>s'inscrivant dans le <span style="color:blue;" class="svg-text hover-item" data-tooltip="cadre">
+            cadre proposé</span> au travers du <span style="color:blue;" class="svg-text hover-item" data-tooltip="manifeste">manifeste OPF</span> pour les <span style="color:blue;" class="svg-text  hover-item" data-tooltip="organisation">organisations résilientes</span> et <span style="color:blue;" class="svg-text  hover-item" data-tooltip="anti-fragile">anti-fragiles</span></li>  
+          </ul>
+        </ul>
+    </ul>
+     
+    </div>
+    <div class="grid-item blank"></div>
+ 
+    <div class="grid-item large blank"><p>&copy; 2024 OPF Manifest All rights reserved.</p></div>  
+</div>
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const textElement = document.getElementById('text3');
+    if (textElement) {
+      textElement.setAttribute('transform', 'rotate(30, 300, 345)');
+    }
+  //fleche jaune  
+  var path = document.getElementById("myPath");
+  path.setAttribute('transform', 'translate(1000, -100)');
+
+  // Pilar Interprenariat - not by cloning as we don't want names to be rotated 
+  var text3Element = document.getElementById('text3');
+  text3Element.setAttribute('transform', 'translate(800, 685)');
+
+  text3Element = document.getElementById('text3-middle');
+  text3Element.textContent = "Interprenariat"; 
+  text3Element.setAttribute('data-tooltip',"interprenariat");
+
+ 
+  text3Element = document.getElementById('text3-bottom');
+  text3Element.textContent = "Culture"; 
+  text3Element.setAttribute('data-tooltip',"culture");
+  text3Element = document.getElementById('text3b-bottom');
+  text3Element.textContent = "sclérosée=>dynamique"; 
+  text3Element.setAttribute('data-tooltip',"rigid-dynamic");
+  text3Element.setAttribute('font-size', '40'); 
+
+  text3Element = document.getElementById('text3-left');
+  text3Element.textContent = 'Impermanence'; 
+  text3Element.setAttribute('data-tooltip',"impermanence");   
+  text3Element = document.getElementById('text3b-left');
+  text3Element.textContent = "fixité=>fluidité"; 
+  text3Element.setAttribute('data-tooltip', "fix-fluid");
+  text3Element.setAttribute('font-size', '40'); 
+
+  text3Element = document.getElementById('text3-right');
+  text3Element.textContent = 'Savoir-être'; 
+  text3Element.setAttribute('font-size', '45'); 
+  text3Element.setAttribute('data-tooltip',"knowhowtobe-mindset");
+  text3Element = document.getElementById('text3b-right');
+  text3Element.textContent = "Etat d'esprit"; 
+  text3Element.setAttribute('font-size', '45'); 
+  text3Element.setAttribute('data-tooltip',"mindset");
+  text3Element = document.getElementById('text3c-right');
+  text3Element.textContent= "rigidité=>adaptabilité"; 
+  text3Element.setAttribute('data-tooltip',"rigidity-adaptability");
+  text3Element.setAttribute('font-size', '40'); 
+
+  // Clone the template for 2 pilars
+  const template = document.getElementById('template');
+
+// Clone for instance 1 - Enterprise Architecture Pilar
+  const instance1 = template.cloneNode(true);
+  instance1.querySelector('.polygon-color').setAttribute('fill', '#00bf63ff'); 
+  instance1.querySelector('.circle-stroke').setAttribute('stroke', '#00bf63ff'); 
+  instance1.querySelector('.text1-content').textContent = "Architecture";
+  instance1.querySelector('.text1-content').setAttribute('data-tooltip', "AE" ); 
+  instance1.querySelector('.text1b-content').textContent = "d'entreprise";
+  instance1.querySelector('.text2-content').textContent = 'Sémantique';
+  instance1.querySelector('.text2-content').setAttribute('data-tooltip',"semantic"); 
+  instance1.querySelector('.text2b-content').textContent = 'ambiguïté=>clarté';
+  instance1.querySelector('.text2b-content').setAttribute('data-tooltip', "ambiguity-clarity");
+  instance1.querySelector('.text2b-content').setAttribute('font-size', '40'); 
+
+  instance1.querySelector('.text3-content').textContent = 'Contexte';
+  instance1.querySelector('.text3-content').setAttribute('data-tooltip',"context"); 
+  instance1.querySelector('.text3b-content').textContent = 'fragmenté=>ancrage';
+  instance1.querySelector('.text3b-content').setAttribute('data-tooltip', "fragment-anchor"); 
+  instance1.querySelector('.text3b-content').setAttribute('font-size', '40'); 
+
+  instance1.querySelector('.text4-content').textContent = "Données";
+  instance1.querySelector('.text4-content').setAttribute('data-tooltip',"data");        
+  instance1.querySelector('.text4b-content').textContent = "silotées=>connectées";
+
+  instance1.querySelector('.text4b-content').setAttribute('font-size', '40'); 
+  instance1.querySelector('.text4b-content').setAttribute('data-tooltip', "siloted-connected"); 
+  document.getElementById('instance1').appendChild(instance1);
+
+// Clone for instance 2 - Knowledge Management Pilar
+  const instance2 = template.cloneNode(true);
+  instance2.querySelector('.polygon-color').setAttribute('fill', '#ff3131ff'); // Red
+  instance2.querySelector('.circle-stroke').setAttribute('stroke', '#ff3131ff'); // Red
+  instance2.querySelector('.text1-content').textContent = 'Gestion de la';
+  instance2.querySelector('.text1-content').setAttribute('data-tooltip',"KM" ); 
+  instance2.querySelector('.text1b-content').textContent = 'connaissance';
+  instance2.querySelector('.text2-content').textContent = 'Patrimoine de connaissance';
+  instance2.querySelector('.text2-content').setAttribute('data-tooltip', "patrimoine"); 
+  instance2.querySelector('.text2b-content').textContent = 'tacite => explicite';
+  instance2.querySelector('.text2b-content').setAttribute('font-size', '40');
+  instance2.querySelector('.text2b-content').setAttribute('data-tooltip',"tacit-explicit"); 
+
+  instance2.querySelector('.text3-content').textContent = 'Partage';
+  instance2.querySelector('.text3-content').setAttribute('data-tooltip',"partage");
+  instance2.querySelector('.text3b-content').textContent = 'Individu=>Collectif';
+  instance2.querySelector('.text3b-content').setAttribute('font-size', '40');
+  instance2.querySelector('.text3b-content').setAttribute('data-tooltip', "individual-collective"); 
+
+  instance2.querySelector('.text4-content').textContent = 'Opérationnalisation';
+  instance2.querySelector('.text4b-content').textContent = 'Savoir=>Savoir-Faire';
+  instance2.querySelector('.text4b-content').setAttribute('font-size', '40'); 
+  instance2.querySelector('.text4-content').setAttribute('data-tooltip',"operationnalization" );
+  instance2.querySelector('.text4b-content').setAttribute('data-tooltip', "know-knowto");
+  document.getElementById('instance2').appendChild(instance2);
+
+
+// Clone for instance 3 - just circles and triangle, all the text is not feed as it was created earlier
+  const instance3 = template.cloneNode(true);
+  instance3.querySelector('.polygon-color').setAttribute('fill', '#ffde59ff'); // Yellow
+  instance3.querySelector('.circle-stroke').setAttribute('stroke', '#ffde59ff'); // Yellow
+  document.getElementById('instance3').appendChild(instance3);
+
+//Set of events for tooltips on SVG elements
+  const tooltip = document.getElementById('tooltip');
+  const svgTexts = document.querySelectorAll('.svg-text');
+  svgTexts.forEach(textElement => {
+    textElement.addEventListener('mouseover', function(event) {
+      tooltip.textContent = this.getAttribute('data-tooltip');
+      tooltip.style.left = `${event.pageX + 10}px`;
+      tooltip.style.top = `${event.pageY + 10}px`;
+      tooltip.classList.add('show');
+    });
+    textElement.addEventListener('mousemove', function(event) {
+      tooltip.style.left = `${event.pageX + 10}px`;
+      tooltip.style.top = `${event.pageY + 10}px`;
+    });
+    textElement.addEventListener('mouseout', function() {
+      tooltip.classList.remove('show');
+    });
+  });
+// creation of the arrows on between pilars  
+   let arrowLength = 100;
+   // Update the arrow line length
+   document.getElementById('arrow-line').setAttribute('x2', 50 + arrowLength);
+
+   // Update the position of the right arrowhead
+     document.getElementById('arrowhead-right').setAttribute('points', `${50 + arrowLength},90 ${50 + arrowLength},110 ${70 + arrowLength},100`);
+
+
+
+  document.querySelectorAll('.hover-item').forEach(item => {
+  item.addEventListener('mouseover', function() {
+    try {
+      let myItem = document.getElementById("manifeste");
+      myItem.style.display = 'none';
+      let tooltipId = this.getAttribute('data-tooltip');
+      let glossaryItem = document.getElementById(tooltipId);
+
+      if (!glossaryItem) {
+        throw new Error(`Glossary item with id ${tooltipId} not found`);
+      }
+
+      glossaryItem.style.display = 'block';
+      
+    } catch (error) {
+      console.error("Error in displaying tooltip:", error.message);
+    }
+  });
+
+  item.addEventListener('mouseout', function() {
+    try {
+      document.querySelectorAll('.glossary-item').forEach(item => {
+        item.style.display = 'none';
+      });
+      let myItem = document.getElementById("manifeste");
+      myItem.style.display = 'block';
+    } catch (error) {
+      console.error("Error in hiding tooltips:", error.message);
+    }
+  });
+}); 
+
+// svg zoom and move
+const svg = document.getElementById("monSvg");
+const svgContainer = document.getElementById("svgContainer");
+let isPanning = false;
+let startX, startY;
+let zoomLevel = 1;
+let minZoom = 1;
+let maxZoom = 4;
+
+// Get SVG dimensions from attributes
+const svgWidth = parseFloat(svg.getAttribute('width'));
+const svgHeight = parseFloat(svg.getAttribute('height'));
+
+let legacyViewBoxString = svg.getAttribute('viewBox');
+let [x, y, width, height] = legacyViewBoxString.split(' ').map(Number);
+
+// Assign the values to your new viewBox variable
+var viewBox = { x, y, width, height };
+
+// Handle panning
+svg.addEventListener("mousedown", (e) => {
+  isPanning = true;
+  startX = e.clientX;
+  startY = e.clientY;
+  svg.style.cursor = "grabbing";
+});
+
+svg.addEventListener("mouseup", () => {
+  isPanning = false;
+  svg.style.cursor = "grab";
+});
+
+svg.addEventListener("mousemove", (e) => {
+  if (!isPanning) return;
+
+  // Calculate movement based on zoom level and viewBox size
+  const dx = (startX - e.clientX) * (viewBox.width / svgContainer.clientWidth);
+  const dy = (startY - e.clientY) * (viewBox.height / svgContainer.clientHeight);
+  
+  startX = e.clientX;
+  startY = e.clientY;
+
+  viewBox.x += dx;
+  viewBox.y += dy;
+
+  constrainViewBox();
+  updateViewBox();
+});
+
+// Handle zoom with the wheel
+svg.addEventListener("wheel", (e) => {
+  const scaleAmount = 0.01;
+  const zoomFactor = e.deltaY < 0 ? 1 + scaleAmount : 1 - scaleAmount;
+
+  const newZoomLevel = Math.min(Math.max(zoomLevel * zoomFactor, minZoom), maxZoom);
+
+  const mouseX = e.clientX - svgContainer.getBoundingClientRect().left;
+  const mouseY = e.clientY - svgContainer.getBoundingClientRect().top;
+
+  const svgPointX = (mouseX / svgContainer.clientWidth) * viewBox.width + viewBox.x;
+  const svgPointY = (mouseY / svgContainer.clientHeight) * viewBox.height + viewBox.y;
+
+  const scaleRatio = zoomLevel / newZoomLevel;
+  viewBox.width *= scaleRatio;
+  viewBox.height *= scaleRatio;
+
+  // Adjust viewBox x/y to keep the zoom centered on the cursor
+  viewBox.x = svgPointX - (mouseX / svgContainer.clientWidth) * viewBox.width;
+  viewBox.y = svgPointY - (mouseY / svgContainer.clientHeight) * viewBox.height;
+
+  zoomLevel = newZoomLevel;
+
+  constrainViewBox();
+  updateViewBox();
+}, { passive: true });
+
+// Update the viewBox
+function updateViewBox() {
+  svg.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+}
+
+// Constrain the viewBox to prevent showing more than the SVG content
+function constrainViewBox() {
+  // Prevent panning beyond the left or top boundary
+  if (viewBox.x < 0) viewBox.x = 0;
+  if (viewBox.y < 0) viewBox.y = 0;
+
+  // Prevent excessive zoom out
+  if (viewBox.width < svgWidth / maxZoom) viewBox.width = svgWidth / maxZoom;
+  if (viewBox.height < svgHeight / maxZoom) viewBox.height = svgHeight / maxZoom;
+}
+
+// Handle double-click event to show width, height, and viewBox
+svg.addEventListener("dblclick", () => {
+  const currentWidth = svg.getAttribute('width');
+  const currentHeight = svg.getAttribute('height');
+  const currentViewBox = svg.getAttribute('viewBox');
+});
+
+// Initialization
+updateViewBox();
+let myItem = document.getElementById("manifeste");
+myItem.style.display = 'block';
+});
+  </script>       
+
+<div id="tooltip" class="tooltip"></div>
+</body>
+</html>
